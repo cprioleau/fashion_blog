@@ -1,0 +1,38 @@
+.container {
+  width:800px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.nav li {
+  list-style:none;
+  display:inline;
+}
+
+.nav ul {
+  padding:0;
+}
+
+.row {
+  border:#000 1px solid;
+  /*must bet on parent of floated child elements*/
+  overflow: hidden;
+}
+
+.col-4, .col-8, .col-12 {
+  border: #000 1 px solid;
+  float: left;
+  box-sizing: border-box;
+}
+
+.col-4 {
+  width: 33.33333333333%;
+}
+
+.col-8 {
+  width: 66.66666666666666%;
+}
+
+.col-12 {
+  width: 100%;
+}
