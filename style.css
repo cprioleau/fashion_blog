@@ -1,21 +1,75 @@
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
 body {
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #444444;
-  font-size: 9pt;
+  font-size: 12px;
   font-weight: lighter;
   line-height: 2;
+  margin-bottom:40px;
+  line-height: 16px;
+}
+
+.container {
+  /* width of 100% allows the container to respond to small screen sizes */
+  width:100%;
+  /* max-width of 1000px caps the container at 1000px */
+  max-width:1000px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.row {
+  /*must be on parent of floated child elements*/*/
+  overflow: hidden;
+}
+
+.nav a {
+    display:block;
+    padding:15px;
+    background-color:#000;
+    color:#FFF;
+    font-size:1.5em;
+    text-decoration:none;
+    border-right:#FFF 1px solid;
+}
+
+.txt-center {
+    text-align:center;
+}
+
+.nav a:hover {
+    color:#F30000;
+}
+
+
+.col-2, .col-4, .col-8 {
+  float: left;
+  box-sizing: border-box;
+}
+
+.col-2 {
+  width: 16.6666666666%;
+}
+
+.col-4 {
+  width: 33.33333333333%;
+}
+
+.col-8 {
+  width: 66.66666666666666%;
 }
 
 .text-red {
-  color: #f30000;
+  color: #F30000;
 }
 
 .blog-title {
-  font-size: 27pt;
+  font-size: 3em;
 }
 
 .article-title {
-  font-size: 20pt;
+  font-size: 2em;
   line-height: 5pt;
 }
 
@@ -31,9 +85,15 @@ body {
   line-height: 10pt;
 }
 
-.text-more{
+.blog-image {
+    display: block;
+    width: 100%;
+}
+
+.text-more {
   text-align: right;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .header-sidebar {
@@ -47,8 +107,7 @@ body {
 
 .ul-sidebar {
     list-style: none;
-    padding:0;
-    margin:0;
+    margin-top: 1em;
 }
 
 .ul-sidebar li {
@@ -68,30 +127,21 @@ h1 {
 .text-dropcap {
   float: left;
   color: #dddddd;
-  font-size: 54pt;
-  line-height: 60px;
+  font-size: 5em;
+  line-height: 3em;
   padding-right: 4px;
 }
 
 hr {
    display: block;
    position: relative;
-   padding: 0;
-   margin: 8px auto;
-   height: 0;
-   width: 100%;
+   margin: 10px auto;
    max-height: 0;
    font-size: 1px;
    line-height: 0;
    clear: both;
    border: none;
    border-top: 1px solid #dddddd;
-}
-
-.container {
-  width:900px;
-  margin-left:auto;
-  margin-right: auto;
 }
 
 .nav ul {
@@ -104,29 +154,26 @@ hr {
 }
 .nav li {
   display: inline;
-  line-height: 50px;
+  line-height: 2em;
   font-size: 1.75em;
   height: 40px;
 }
 
-.row {
-  /*must bet on parent of floated child elements*/*/
-  overflow: hidden;
+.responsive-padding-left-45 {
+    padding-left: 45px;
 }
 
-.col-4, .col-8, .col-12 {
-  float: left;
-  box-sizing: border-box;
-}
+/* When the screen size drops below 720px stack the columns */
+@media(max-width: 600px) {
+    .col-2, .col-4, .col-8 {
+        width: 100%;
+    }
 
-.col-4 {
-  width: 33.33333333333%;
-}
+    .responsive-padding-left-45 {
+        padding-left: 0;
+    }
 
-.col-8 {
-  width: 66.66666666666666%;
-}
-
-.col-12 {
-  width: 100%;
+    body {
+      font-size: 10px;
+    }
 }
